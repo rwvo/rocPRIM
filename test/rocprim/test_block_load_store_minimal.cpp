@@ -73,36 +73,47 @@ public:
 };
 
 typedef ::testing::Types<
+typedef ::testing::Types<
     // block_load_direct
-    class_params<int, rocprim::block_load_method::block_load_direct,
+    /*class_params<int, rocprim::block_load_method::block_load_direct,
                  rocprim::block_store_method::block_store_direct, 512U, 3>,
     class_params<int, rocprim::block_load_method::block_load_direct,
                  rocprim::block_store_method::block_store_direct, 512U, 4>,
     class_params<int, rocprim::block_load_method::block_load_direct,
                  rocprim::block_store_method::block_store_direct, 512U, 5>,
     class_params<int, rocprim::block_load_method::block_load_direct,
-                 rocprim::block_store_method::block_store_direct, 512U, 6>,
+                 rocprim::block_store_method::block_store_direct, 512U, 6>,*/
 
 
+    //class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_direct,
+    //             rocprim::block_store_method::block_store_direct, 256U, 4>,
+    //class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_direct,
+    //             rocprim::block_store_method::block_store_direct, 256U, 5>,
+    //class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_direct,
+    //             rocprim::block_store_method::block_store_direct, 256U, 6>,
     class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_direct,
-                 rocprim::block_store_method::block_store_direct, 256U, 4>,
+                 rocprim::block_store_method::block_store_direct, 256U, 7>,
+
+
 
     // block_load_vectorize
     class_params<double, rocprim::block_load_method::block_load_vectorize,
                  rocprim::block_store_method::block_store_vectorize, 512U, 2>,
 
+    //class_params<double, rocprim::block_load_method::block_load_vectorize,
+    //             rocprim::block_store_method::block_store_vectorize, 512U, 3>,
 
     class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_vectorize,
-                 rocprim::block_store_method::block_store_vectorize, 256U, 4>,
+                 rocprim::block_store_method::block_store_vectorize, 256U, 4>/*,
 
     // block_load_transpose
 
     class_params<double, rocprim::block_load_method::block_load_transpose,
-                 rocprim::block_store_method::block_store_transpose, 512U, 3>,
+                 rocprim::block_store_method::block_store_transpose, 512U, 3>,*/
 
 
-    class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_transpose,
-                 rocprim::block_store_method::block_store_transpose, 256U, 4>
+    /*class_params<test_utils::custom_test_type<double>, rocprim::block_load_method::block_load_transpose,
+                 rocprim::block_store_method::block_store_transpose, 256U, 4>*/
 
 > ClassParams;
 
