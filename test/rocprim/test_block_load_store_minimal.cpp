@@ -73,7 +73,6 @@ public:
 };
 
 typedef ::testing::Types<
-typedef ::testing::Types<
     // block_load_direct
     /*class_params<int, rocprim::block_load_method::block_load_direct,
                  rocprim::block_store_method::block_store_direct, 512U, 3>,
